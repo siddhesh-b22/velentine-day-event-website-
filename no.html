@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wait! Think from Your Heart 💕</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #fbc1bc, #a8d7ff);
+            color: #ff4b5c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 50px;
+            border-radius: 25px;
+            max-width: 650px;
+            text-align: center;
+            box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            animation: fadeIn 1.5s ease-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-size: 2.6em;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            font-size: 1.4em;
+            margin: 15px 0;
+            color: #ff4b5c;
+        }
+        .gif {
+            width: 280px;
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+            border: 3px solid #ff4b5c;
+            transition: transform 0.3s ease-in-out;
+        }
+        .gif:hover {
+            transform: scale(1.1);
+        }
+        .buttons {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .button {
+            padding: 18px 45px;
+            font-size: 1.4em;
+            background: #f85157;
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+        }
+        .button:hover {
+            background: #ff7f8c;
+            transform: scale(1.1);
+        }
+        .no-button {
+            position: relative;
+            background: transparent;
+            border: 2px solid #ff7f8c;
+            color: #ff7f8c;
+        }
+        .no-button:hover {
+            background: #ff7f8c;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                width: 90%;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1.2em;
+            }
+            .gif {
+                width: 220px;
+            }
+        }
+    </style>
+    <script>
+        function moveButton() {
+            const button = document.getElementById("no-btn");
+            const x = Math.random() * (window.innerWidth - 200);
+            const y = Math.random() * (window.innerHeight - 100);
+            button.style.position = "absolute";
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Wait, think from your heart! 💕</h1>
+        <p>Make sure you’re making the right choice... 😜</p>
+        <img src="./sticker.jpg" class="gif" alt="Cute Reaction">
+        <p>It’s not about pressure, just listen to your heart! 😍</p>
+        <div class="buttons">
+            <a href="yes.html"><button class="button" aria-label="Say Yes to the Heart">Yes, I like you too! 💖</button></a>
+            <button class="button no-button" id="no-btn" onmouseover="moveButton()" aria-label="No, I need more time...">No, I need more time... 🤔</button>
+        </div>
+    </div>
+</body>
+</html>
